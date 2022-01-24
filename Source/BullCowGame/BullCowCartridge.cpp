@@ -6,11 +6,11 @@ void UBullCowCartridge::BeginPlay() // When the game starts
     Super::BeginPlay();
     PrintLine(TEXT("Welcome to Bulls & Cows!"));
     PrintLine(TEXT("Type something and then press enter:"));
+    HiddenWord = TEXT("cat");
 }
 
 void UBullCowCartridge::OnInput(const FString& Input) // When the player hits enter
 {
-    FString HiddenWord = TEXT("cat");
     ClearScreen();
     if(Input == HiddenWord){
         PrintLine(TEXT("You Win!"));
